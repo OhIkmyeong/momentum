@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+#sect_clock{position:relative; text-align:center;}
+
+#sect_clock .clock{font-size:6rem;}
+
+#sect_clock .info_clock{
+    margin-top:-1.25rem;
+    font-size:1.25rem;}
+
+#user{cursor:pointer;}
