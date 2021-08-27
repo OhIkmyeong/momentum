@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>To do List</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="./css/user.css"/>
+<link rel="stylesheet" type="text/css" href="./css/clock.css"/>
+<link rel="stylesheet" type="text/css" href="./css/todo.css"/>
+<link rel="stylesheet" type="text/css" href="./css/quote.css"/>
+<link rel="stylesheet" type="text/css" href="./css/weather.css"/>
+<script src="./js/main_mine.js" type="module"></script>
+</head>
+<body>
+<div id="wrapper">
+    <section id="sect_weather"></section><!-- sect_weather -->
+
+    <section id="sect_user">
+        <form id="form_user">
+            <input id="ipt_user" type="text" maxlength="10" placeholder="이름을 입력하세요" required/>
+            <button id="btn_user-login">LOGIN</button>
+            <button id="btn_user-logout" class="hidden">LOGOUT</button>
+        </form><!-- form_user -->
+    </section><!-- sect_user -->
+
+    <section id="sect_clock">
+        <div class="clock">0:00</div>
+        <div class="info_clock"><span class="status_clock">Good Morning</span>, <strong id="user">${user}</strong></div>
+    </section><!-- sect_clock -->
+
+    <section id="sect_todo">
+        <h3 class="title">What is your main focus for today?</h3>
+        <form id="form_todo"><input id="ipt_todo" type="text" autocomplete="off" required></form>
+        <ul id="ul_todo"></ul>
+    </section><!-- sect_todo -->
+
+    <section id="sect_quote">
+        <p class="q_qt">이곳에 명언 출력</p>
+        <p class="q_author">홍길동</p>
+    </section><!-- sect_quote -->
+</div><!-- wrapper -->
+</body>
+</html>
