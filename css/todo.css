@@ -1,0 +1,88 @@
+@charset "utf-8";
+#sect_todo{
+    position:relative;
+    margin-top:3rem;
+    text-align:center;}
+
+#sect_todo .title{
+    opacity:.9;
+    font-weight:normal; font-size:.875rem;}
+
+#ipt_todo{
+    display:block;
+    width:100%;
+    padding:1em; 
+    background:transparent;
+    border:none;border-bottom:var(--bdr);
+    text-align:center; font-size:14px;
+    transition:all .3s;}
+
+#ipt_todo:focus{
+    outline:none;
+    margin-top:1rem;
+    background:var(--box);
+    backdrop-filter:var(--bg-blur);
+}
+
+#ul_todo{
+    position:relative; 
+    overflow-x:hidden; overflow-y:auto;
+    width:100%; max-width:600px; 
+    max-height:35vh;
+    margin-top:1rem;
+    text-align:left; font-size:0.875rem;}
+
+    #ul_todo::-webkit-scrollbar{width:10px;}
+    #ul_todo::-webkit-scrollbar-thumb{
+        background:rgba(255,255,255,.2);
+        border:1px solid rgba(255,255,255,.5);
+        border-radius:2px;}
+    #ul_todo::-webkit-scrollbar-track{background:transparent;}
+
+#ul_todo:empty{
+    padding:1rem;
+    background:var(--box);
+    backdrop-filter:var(--bg-blur);
+    border:1px solid rgba(255,255,255,.3);
+    animation: empty_todo ease-in-out .8s forwards;}
+
+#ul_todo:empty::after{
+    content:'Is there NOTHING-TO-DO for Today?';
+    display:block;
+    width:100%;
+    opacity:.7;
+    text-align:center; font-size:12px;}
+
+    @keyframes empty_todo {
+        0%{transform:translateY(-25%); opacity:.5}
+        100%{transform:translateY(0);}
+    }
+
+#ul_todo li{
+    display:flex;
+    justify-content:space-between; align-items:flex-start;
+    position:relative;
+    width:100%;
+    padding:.5em 0;
+    border-bottom:1px solid rgba(255,255,255,.2);}
+
+    #ul_todo li p{
+        word-break:break-all;
+        width:80%;}
+
+#ul_todo li.del{
+    animation:del forwards ease-in-out .8s;
+}
+
+@keyframes del {
+    0%{transform:translateX(0);}
+    10%{transform:translateX(-20%);}
+    100%{transform:translateX(100%);}
+}
+
+.btn_del{
+    padding:.25em .5em;
+    background:transparent;
+    border:none;
+    font-size:14px;}
+    
